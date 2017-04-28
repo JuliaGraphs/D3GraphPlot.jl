@@ -47,9 +47,13 @@ function d3AtomPlot(g::Graph)
     #call the javascript function drawgraph()
     plot = Plot(data_json_string, Base.Random.uuid1())
 
+    #display the plot
+    display_blink(SyncPlot(plot))
+
     return plot
 end
 
 export d3BlinkPlot, d3AtomPlot
 
 end # module
+
