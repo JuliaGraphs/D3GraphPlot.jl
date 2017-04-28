@@ -1,7 +1,10 @@
 
 module D3GraphPlot
 
-using LightGraphs, JSON, Blink, Atom
+using LightGraphs, JSON, Blink, Atom, Juno
+
+include("d3graphelectron.jl")
+include("d3graphjuno.jl")
 
 function graphtojsonstring(g::Graph)
     data = Dict()
@@ -42,8 +45,9 @@ function d3AtomPlot(g::Graph)
     data_json_string = graphtojsonstring(g)
 
     #call the javascript function drawgraph()
-    runarg = string("drawgraph('", data_json_string, "')")
-    Atom.@msg ploturlandrun(url, runarg)
+    plot = Plot(data_json_string, Base.Random.uuid1())
+
+    return plot
 end
 
 export d3BlinkPlot, d3AtomPlot

@@ -9,4 +9,3 @@ add_edge!(g, 3, 1)
 # d3BlinkPlot(g)
 d3AtomPlot(g)
 
-
