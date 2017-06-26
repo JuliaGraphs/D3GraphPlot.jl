@@ -1,6 +1,5 @@
 # D3GraphPlot.jl
 
-Warning: Currently broken !
 
 The goal of this package is to offer the possibility of printing a Graph within a panel of Atom or in an external window using Blink.
 
