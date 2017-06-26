@@ -1,2 +1,2 @@
- using LightGraphs; using D3GraphPlot; d3AtomPlot(Graph(4,6))
+ using LightGraphs; using D3GraphPlot; d3plot(Graph(4,6))
 

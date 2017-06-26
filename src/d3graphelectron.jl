@@ -21,7 +21,7 @@ type SyncPlot
     view::ElectronDisplay
 end
 
-typealias ElectronPlot SyncPlot
+const ElectronPlot = SyncPlot
 
 ElectronDisplay(divid::Base.Random.UUID) = ElectronDisplay(divid, Nullable())
 ElectronDisplay(p::Plot) = ElectronDisplay(p.divid)

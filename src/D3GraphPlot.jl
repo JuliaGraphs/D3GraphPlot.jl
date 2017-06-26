@@ -37,7 +37,7 @@ function d3BlinkPlot(g::Graph)
     @js w (drawgraph($data_json_string);)
 end
 
-function d3AtomPlot(g::Graph)
+function d3plot(g::Graph)
     #load javascript function drawgraph() that is based on d3 in the pane Plots
     url = string("file://", dirname(@__FILE__), "/../resources/index.html")
 
@@ -53,7 +53,7 @@ function d3AtomPlot(g::Graph)
     return plot
 end
 
-export d3BlinkPlot, d3AtomPlot
+export d3BlinkPlot, d3plot
 
 end # module
 
